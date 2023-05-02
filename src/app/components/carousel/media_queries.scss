@@ -1,0 +1,136 @@
+@media only screen and (max-width: 700px) {
+  .b-carousel {
+    padding: 40px 30px 0px 30px;
+
+    &__logo {
+      font-size: 23px;
+      letter-spacing: 2px;
+    }
+
+    &__logo-text {
+      font-size: 14px;
+    }
+
+    &__right {
+      margin-top: 0;
+    }
+
+    &__cart {
+      margin-right: 10px;
+    }
+
+    &__number {
+      width: 38px;
+      height: 38px;
+      line-height: 36px;
+    }
+  }
+
+  .b-product {
+    &__wrapper {
+      flex-direction: column-reverse;
+      padding-right: 0;
+    }
+
+    &__left {
+      width: 100%;
+      padding-top: 0;
+      margin-left: 0;
+    }
+
+    &__title {
+      height: auto;
+      font-size: 25px;
+      line-height: unset;
+    }
+
+    &__prices {
+      width: 200px;
+      margin-left: 0;
+      font-size: 20px;
+    }
+
+    &__cart-container {
+      width: 160px;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    &__plus {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__add {
+      font-size: 16px;
+    }
+
+    &__img-wrapper {
+      order: 1;
+      height: 100%;
+      margin: 0 auto;
+      min-width: 200px;
+    }
+  }
+
+  .b-alert {
+    left: 0;
+    top: 130%;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .carousel-control-prev {
+    top: 42%;
+  }
+  
+  .carousel-control-next {
+    top: 28%;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 899px) {
+  .b-product {
+    &__left {
+      width: 53%;
+      margin-left: 0;
+      padding-top: 70px;
+    }
+
+    &__title {
+      font-size: 50px;
+      line-height: 82px;
+    }
+
+    &__img-wrapper {
+      min-width: 200px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+  .b-product {
+    &__title {
+      min-width: 350px;
+      font-size: 70px;
+    } 
+  }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1399px) {
+  .b-product {
+    &__title {
+      font-size: 70px;
+    } 
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .b-carousel {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}

@@ -16,41 +16,41 @@
   }
 
   &__logo {
-    color: v.$color-light-gray; 
     font-size: 33px;
     line-height: 1.1; 
     letter-spacing: 4px;
     cursor: pointer;
+    color: v.$color-light-gray; 
   }
 
   &__logo-text {
-    color: v.$color-light-gray; 
     font-size: 18px; 
     letter-spacing: 1px;
     cursor: pointer;
+    color: v.$color-light-gray; 
   }
 
   &__right {
     display: flex; 
-    color: v.$color-white; 
     margin-top: 28px; 
     margin-right: 10px;
     cursor: pointer;
+    color: v.$color-white; 
   }
 
   &__cart {
     align-self: center; 
     margin-right: 31px; 
-    font-size: 22px;
     margin-bottom: 6px;
+    font-size: 22px;
   }
 
   &__number {
-    border-radius: 50%; 
-    background-color: v.$color-blue; 
     align-self: center;
     width: 48px;
     height: 48px;
+    border-radius: 50%; 
+    background-color: v.$color-blue; 
     text-align: center;
     line-height: 44px;
   }
@@ -62,49 +62,49 @@
 
   &__wrapper {
     display: flex; 
-    justify-content: space-between; 
-    width: 80%; 
+    justify-content: space-between;
     margin: 0 auto; 
     height: 85%; 
-    padding-right: 90px; 
+    padding-right: 100px; 
+    max-width: 1450px;
   }
 
   &__left {
-    align-self: stretch; 
-    width: 45%; 
-    margin-left: 40px; 
     display: flex; 
     flex-direction: column; 
-    padding-top: 152px; 
+    align-self: stretch; 
     justify-content: space-between;
+    width: 45%; 
+    margin-left: 40px; 
+    padding-top: 152px; 
   }
 
   &__title {
-    color: v.$color-white; 
     line-height: 114px; 
-    font-size: 105px;
     max-width: 650px; 
-    text-overflow: ellipsis; 
     height: 344px; 
-    overflow: hidden; 
     display: -webkit-box; 
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    font-size: 105px;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    color: v.$color-white; 
   }
 
   &__prices {
     display: flex; 
     justify-content: space-between; 
-    font-weight: bold; 
-    font-size: 40px; 
-    margin-left: 36px; 
+    width: 330px;
+    margin-left: 30px; 
     margin-top: 20px; 
-    width: 50%;
+    font-size: 40px; 
+    font-weight: bold; 
   }
 
   &__old-price {
-    color: v.$color-light-gray; 
     text-decoration: line-through;
+    color: v.$color-light-gray; 
   }
 
   &__new-price {
@@ -112,14 +112,14 @@
   }
 
   &__cart-container {
-    color: v.$color-white; 
-    margin-left: 26px; 
+    position: relative;
     display: flex; 
     justify-content: space-between; 
-    width: 38%; 
     align-items: center; 
+    width: 230px; 
+    margin-left: 26px; 
+    color: v.$color-white; 
     cursor: pointer;
-    position: relative;
   }
 
   &__plus {
@@ -139,10 +139,13 @@
     text-transform: uppercase;
   }
 
-  &__image {
-    height: 100%; 
+  &__img-wrapper {
+    max-height: 100%; 
     width: 30%;
-    border-radius: 6%;
+    min-width: 270px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -180,3 +183,6 @@
   padding-right: 30px;
   height: fit-content;
 }
+
+
+@import "./media_queries.scss";
