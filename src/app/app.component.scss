@@ -1,0 +1,6 @@
+@use "../styles/variables" as v;
+
+.b-container {
+  height: 100%;
+  background-color: v.$color-dark-gray
+}

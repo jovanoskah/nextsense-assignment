@@ -1,0 +1,182 @@
+@use "../../../styles/variables" as v;
+
+.b-carousel {
+  height: 100%; 
+  width: 100%; 
+  padding: 40px 50px 0px 50px;
+  font-family: "Futura";
+
+  &__inner {
+    height: 100%;
+  }
+
+  &__header {
+    display: flex; 
+    justify-content: space-between;
+  }
+
+  &__logo {
+    color: v.$color-light-gray; 
+    font-size: 33px;
+    line-height: 1.1; 
+    letter-spacing: 4px;
+    cursor: pointer;
+  }
+
+  &__logo-text {
+    color: v.$color-light-gray; 
+    font-size: 18px; 
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  &__right {
+    display: flex; 
+    color: v.$color-white; 
+    margin-top: 28px; 
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__cart {
+    align-self: center; 
+    margin-right: 31px; 
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  &__number {
+    border-radius: 50%; 
+    background-color: v.$color-blue; 
+    align-self: center;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 44px;
+  }
+}
+
+.b-product {
+  width: 100%; 
+  height: 100%;
+
+  &__wrapper {
+    display: flex; 
+    justify-content: space-between; 
+    width: 80%; 
+    margin: 0 auto; 
+    height: 85%; 
+    padding-right: 90px; 
+  }
+
+  &__left {
+    align-self: stretch; 
+    width: 45%; 
+    margin-left: 40px; 
+    display: flex; 
+    flex-direction: column; 
+    padding-top: 152px; 
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: v.$color-white; 
+    line-height: 114px; 
+    font-size: 105px;
+    max-width: 650px; 
+    text-overflow: ellipsis; 
+    height: 344px; 
+    overflow: hidden; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  &__prices {
+    display: flex; 
+    justify-content: space-between; 
+    font-weight: bold; 
+    font-size: 40px; 
+    margin-left: 36px; 
+    margin-top: 20px; 
+    width: 50%;
+  }
+
+  &__old-price {
+    color: v.$color-light-gray; 
+    text-decoration: line-through;
+  }
+
+  &__new-price {
+    color: v.$color-blue;
+  }
+
+  &__cart-container {
+    color: v.$color-white; 
+    margin-left: 26px; 
+    display: flex; 
+    justify-content: space-between; 
+    width: 38%; 
+    align-items: center; 
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__plus {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 50%; 
+    border: 4px solid v.$color-blue; 
+    align-self: center;
+    line-height: 38px;
+  }
+
+  &__add {
+    font-size: 22px; 
+    font-weight: bold; 
+    text-transform: uppercase;
+  }
+
+  &__image {
+    height: 100%; 
+    width: 30%;
+    border-radius: 6%;
+  }
+}
+
+.b-alert {
+  position: absolute;
+  left: 110%;
+  width: 100%;
+  margin-bottom: 0;
+  background-color: v.$color-blue;
+  color: v.$color-white;
+}
+
+// bootstrap carousel classes
+
+.carousel-control-prev {
+  right: 0;
+  left: unset;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 6rem;
+  height: 4rem;
+}
+
+.carousel-control-prev {
+  top: 72%;
+}
+
+.carousel-control-next {
+  top: 58%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  justify-content: flex-end;
+  padding-right: 30px;
+  height: fit-content;
+}

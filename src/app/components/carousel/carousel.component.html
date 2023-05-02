@@ -1,0 +1,52 @@
+<div id="carouselExample" class="carousel slide b-carousel" *ngIf="products.length != 0" >
+  <div class="carousel-inner b-carousel__inner">
+    <div class="b-carousel__header">
+      <div>
+        <div class="b-carousel__logo">Logo</div>
+        <div class="b-carousel__logo-text">Goes here</div>
+      </div>
+  
+      <div class="b-carousel__right">
+        <div class="b-carousel__cart">Cart</div>
+        <div class="b-carousel__number">{{cartItems}}</div>
+      </div>
+    </div>
+
+    <div class="carousel-item b-product" *ngFor="let product of products; let i = index" [ngClass]="{'active': i == 0 }">
+      <div class="b-product__wrapper">
+        <div class="b-product__left">
+          <div class="b-product__title">{{product.title}}</div>
+          <div class="b-product__prices">
+            <div class="b-product__old-price">$200</div>
+            <div class="b-product__new-price">${{product.price}}</div>
+          </div>
+          <div class="b-product__cart-container" (click)="addToCart()">
+            <div class="b-product__plus">+</div>
+            <div class="b-product__add">Add to cart</div>
+
+            <div class="alert alert-success b-alert" role="alert" *ngIf="showAlert">
+             Item added to the cart!
+            </div>
+          </div>
+        </div>
+        <img src="{{ product.image }}" class="d-block b-product__image" alt="{{product.title}}">
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="d-flex justify-content-center align-items-center h-100" 
+  *ngIf="products.length == 0">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
